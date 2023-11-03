@@ -12,9 +12,9 @@ class Persona {
 	
 	//punto1
 	method mePasas(unElemento, otroComensal) {
-		if (otroComensal.tenesElElemento(unElemento)){
-			criterioDePasar.pasar(unElemento, otroComensal, self)
-		}
+		if (not otroComensal.tenesElElemento(unElemento))
+			throw new Exception(message = "No tiene el elemento cerca")
+		criterioDePasar.pasar(unElemento, otroComensal, self)
 	}
 	
 	method tenesElElemento(unElemento){
