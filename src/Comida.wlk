@@ -2,6 +2,7 @@ class Comida {
 	var property calorias
 	
 	method esCarne() = false
+	method esPesada() = calorias > 500
 }
 
 class ComidaConCarne inherits Comida {
