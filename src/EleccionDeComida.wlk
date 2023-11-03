@@ -22,3 +22,7 @@ class Alternado inherits EleccionDeComida {
 		return aceptoAnterior
 	}
 }
+
+object estandar inherits EleccionDeComida{
+	override method quieroComer(_unaComida) = true
+}

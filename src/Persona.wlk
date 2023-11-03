@@ -1,9 +1,13 @@
+import Comensales.*
+import CriterioDePasar.*
+import EleccionDeComida.*
+
 class Persona {
-	var property posicion
-	const elementosCerca
-	var criterioDePasar //por enunciado elegí composicion
+	var property posicion = ""
+	const elementosCerca = new List()
+	var criterioDePasar = normal //por enunciado elegí composicion
 	
-	var eleccionDeComida
+	var eleccionDeComida = estandar
 	const buche = new List()
 	
 	//punto1
@@ -59,5 +63,17 @@ class Persona {
 	}
 	
 	//3
+	method estaPipon(){
+		buche.any{comida => comida.esPesada()}
+	}
+	
+	//4
+	method laEstaPasandoBien() = self.comiAlgo() and self.estoyBien()
+	
+	method estoyBien() //lo dejo como template, cada persona lo define
+	
+	method comiAlgo() = not buche.isEmpty()
 	
 }
+
+
